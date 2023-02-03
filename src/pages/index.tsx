@@ -1,8 +1,9 @@
+import Layout from '../components/layouts/Layout'
 
 export default function Home() {
   return (
-    <>
-      <h1>Hello</h1>
-    </>
+    <Layout>
+      <h1>CookieMaster</h1>
+    </Layout>
   )
 }
