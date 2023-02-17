@@ -10,20 +10,16 @@ const Navbar = () => {
         </IconButton>
 
         <NextLink href='/' passHref>
-          <Link>
-            <Typography variant='h6' color='white'>
-              CookieMaster
-            </Typography>
-          </Link>
+          <Typography variant='h6' color='white'>
+            CookieMaster
+          </Typography>
         </NextLink>
 
         <div style={{ flex: 1 }}></div>
         <NextLink href='/theme-changer' passHref>
-          <Link>
-            <Typography variant='h6' color='white'>
-              Change Theme
-            </Typography>
-          </Link>
+          <Typography variant='h6' color='white'>
+            Change Theme
+          </Typography>
         </NextLink>
       </Toolbar>
     </AppBar>
