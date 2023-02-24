@@ -44,7 +44,7 @@ const ThemeChangerPage = ({ theme }: Props) => {
               <FormControlLabel value='custom' control={<Radio />} label='Custom' />
             </RadioGroup>
           </FormControl>
-          <Button onClick={onClick}>Request</Button>
+          {/*<Button onClick={onClick}>Request</Button>*/}
         </CardContent>
       </Card>
     </Layout>
@@ -53,9 +53,11 @@ const ThemeChangerPage = ({ theme }: Props) => {
 
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const { theme = 'light' } = req.cookies
+  const validThemes = ['light', 'dark', 'custom']
+
   return {
     props: {
-      theme,
+      theme: validThemes.includes(theme) ? theme : 'light',
     },
   }
 }
